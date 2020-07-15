@@ -145,8 +145,12 @@ function articleMaker(data) {
 }
 
 let article1 = articleMaker(data[0]);
+let article2 = articleMaker(data[1]);
+let article3 = articleMaker(data[2]);
 
 let articles = document.querySelector('.articles');
 
 articles.appendChild(article1);
+articles.appendChild(article2);
+articles.appendChild(article3);
 
