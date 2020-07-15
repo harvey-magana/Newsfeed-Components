@@ -117,7 +117,9 @@ function articleMaker(data) {
   let title = document.createElement('h2');
   let dateP = document.createElement('p');
   let span = document.createElement('span');
-  let childP = document.createElement('p');
+  let firstP = document.createElement('p');
+  let secondP = document.createElement('p');
+  let thirdP = document.createElement('p');
 
   article.setAttribute('class', 'article');
   dateP.setAttribute('class', 'date');
@@ -127,9 +129,14 @@ function articleMaker(data) {
   article.appendChild(title);
   article.append(dateP);
   article.style.height = '100%';
-  article.appendChild(childP)
-  childP.textContent = data[0].firstParagraph;
-  childP.style.color = "#000";
+  article.appendChild(firstP)
+  firstP.textContent = data[0].firstParagraph;
+  article.appendChild(secondP);
+  secondP.textContent = data[0].secondParagraph;
+  article.appendChild(thirdP);
+  thirdP.textContent = data[0].thirdParagraph;
+  article.appendChild(span);
+  span.textContent = '\53';
 
   return article;
 }
