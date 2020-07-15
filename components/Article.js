@@ -117,6 +117,7 @@ function articleMaker(data) {
   let title = document.createElement('h2');
   let dateP = document.createElement('p');
   let span = document.createElement('span');
+  let childP = document.createElement('p');
 
   article.setAttribute('class', 'article');
   dateP.setAttribute('class', 'date');
@@ -125,8 +126,10 @@ function articleMaker(data) {
   dateP.textContent = data[0].date;
   article.appendChild(title);
   article.append(dateP);
-  article.appendChild(span);
-
+  article.style.height = '100%';
+  article.appendChild(childP)
+  childP.textContent = data[0].firstParagraph;
+  childP.style.color = "#000";
 
   return article;
 }
