@@ -128,7 +128,6 @@ function articleMaker(data) {
   dateP.textContent = data[0].date;
   article.appendChild(title);
   article.append(dateP);
-  article.style.height = '100%';
   article.appendChild(firstP)
   firstP.textContent = data[0].firstParagraph;
   article.appendChild(secondP);
@@ -137,6 +136,10 @@ function articleMaker(data) {
   thirdP.textContent = data[0].thirdParagraph;
   article.appendChild(span);
   span.textContent = '\53';
+
+  article.addEventListener('click', () => {
+    article.classList.toggle('article-open')
+  })
 
   return article;
 }
