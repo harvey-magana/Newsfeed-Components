@@ -124,16 +124,16 @@ function articleMaker(data) {
   article.setAttribute('class', 'article');
   dateP.setAttribute('class', 'date');
   span.setAttribute('class', 'expandButton');
-  title.textContent = data[0].title;
-  dateP.textContent = data[0].date;
+  title.textContent = data.title;
+  dateP.textContent = data.date;
   article.appendChild(title);
   article.append(dateP);
   article.appendChild(firstP)
-  firstP.textContent = data[0].firstParagraph;
+  firstP.textContent = data.firstParagraph;
   article.appendChild(secondP);
-  secondP.textContent = data[0].secondParagraph;
+  secondP.textContent = data.secondParagraph;
   article.appendChild(thirdP);
-  thirdP.textContent = data[0].thirdParagraph;
+  thirdP.textContent = data.thirdParagraph;
   article.appendChild(span);
   span.textContent = '\53';
 
@@ -144,7 +144,7 @@ function articleMaker(data) {
   return article;
 }
 
-let article1 = articleMaker(data);
+let article1 = articleMaker(data[0]);
 
 let articles = document.querySelector('.articles');
 
