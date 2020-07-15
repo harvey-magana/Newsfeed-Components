@@ -85,6 +85,22 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Where did all the Pascal programmers do?',
+    date: 'Dec 20, 2017',
+    firstParagraph: `Gartner reports that organizations are faced with a new challenge as baby boomers retire amid a growing skills gap. 
+          It’s creating a new demand for legacy skills as businesses face the option of updating older technology or hiring talent with disappearing 
+          skills. Updating old technology can be a resource drain, and as more seasoned employees cycle out of the workforce, companies might find 
+          themselves lacking skills that are now viewed as outdated.`,
+
+    secondParagraph: `A survey from Computerworld found that, while 65 percent of businesses aren’t looking for legacy skills, 35 percent still 
+          seek workers with legacy programming skills to support critical legacy systems. While you might not want to go out of your way to learn 
+          these nine skills, if you already have the experience, it can make you a uniquely qualified candidate for the right role.`,
+
+    thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
+          Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
+          Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   }
 ];
 
@@ -147,10 +163,15 @@ function articleMaker(data) {
 let article1 = articleMaker(data[0]);
 let article2 = articleMaker(data[1]);
 let article3 = articleMaker(data[2]);
+let article4 = articleMaker(data[3]);
+let article5 = articleMaker(data[4]);
 
 let articles = document.querySelector('.articles');
 
 articles.appendChild(article1);
 articles.appendChild(article2);
 articles.appendChild(article3);
+articles.appendChild(article4);
+articles.appendChild(article5);
+
 
