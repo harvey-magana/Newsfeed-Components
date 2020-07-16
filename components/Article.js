@@ -174,4 +174,25 @@ articles.appendChild(article3);
 articles.appendChild(article4);
 articles.appendChild(article5);
 
+gsap.from(".article", {
+  duration: 2,
+  scale: 0.5, 
+  opacity: 0, 
+  delay: 0.5, 
+  stagger: 0.2,
+  ease: "elastic", 
+  force3D: true
+});
+
+document.querySelectorAll(".box").forEach(function(box) {
+  box.addEventListener("load", function() {
+    gsap.to(".article", {
+      duration: 0.5, 
+      opacity: 0, 
+      y: -100, 
+      stagger: 0.1,
+      ease: "back.in"
+    });
+  });
+});
 
